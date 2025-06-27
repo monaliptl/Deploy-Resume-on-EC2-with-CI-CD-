@@ -8,8 +8,6 @@ This project demonstrates automated CI/CD deployment of a resume website to AWS 
 - AWS EC2 (Ubuntu)
 - Apache Web Server
 
-## 🌐 Live Demo
-[View Resume](http://<your-ec2-public-dns>/)
 
 ## ⚙️ How it Works
 
@@ -34,10 +32,14 @@ This project demonstrates automated CI/CD deployment of a resume website to AWS 
 | `EC2_SSH_KEY` | Your PEM key content |
 | `HOST_DNS`    | EC2 Public DNS |
 | `USERNAME`    | Usually `ubuntu` |
-| `TARGET_DIR`  | e.g. `/home/ubuntu/resume` |
+| `TARGET_DIR`  | e.g. `/home/ubuntu/index` |
 
 ### 3. Create `.github/workflows/push-action-ec2.yml`
 See: [push-action-ec2.yml](.github/workflows/push-action-ec2.yml)
+
+### 4. Demo
+
+![Screenshot (176)](https://github.com/user-attachments/assets/8a97e9e2-5b71-40a2-8a87-e1e5208978ff)
 
 ---
 
