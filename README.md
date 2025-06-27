@@ -37,9 +37,7 @@ This project demonstrates automated CI/CD deployment of a resume website to AWS 
 ### 3. Create `.github/workflows/push-action-ec2.yml`
 See: [push-action-ec2.yml](.github/workflows/push-action-ec2.yml)
 
-### 4. Demo
 
-![Screenshot (176)](https://github.com/user-attachments/assets/8a97e9e2-5b71-40a2-8a87-e1e5208978ff)
 
 ---
 
