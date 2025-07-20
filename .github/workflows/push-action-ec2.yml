@@ -24,7 +24,7 @@ jobs:
           script: |
            cd $HOME
            rm -rf Deploy-Resume-on-EC2-with-CI-CD-
-           git clone https://github.com/monaliptl/Deploy-Resume-on-EC2-with-CI-CD-
+           git clone https://github.com/monaliptl/Deploy-Resume-on-EC2-with-CI-CD-.git
            cd Deploy-Resume-on-EC2-with-CI-CD-
            docker build -t my-resume .
            docker stop my-resume || true
