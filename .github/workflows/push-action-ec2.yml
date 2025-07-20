@@ -22,10 +22,10 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.RESUME_EC2_SSH }}
           script: |
-           cd /home/user1
-           rm -rf my-resume
+           cd $HOME
+           rm -rf Deploy-Resume-on-EC2-with-CI-CD-
            git clone https://github.com/monaliptl/Deploy-Resume-on-EC2-with-CI-CD-
-           cd my-resume
+           cd Deploy-Resume-on-EC2-with-CI-CD-
            docker build -t my-resume .
            docker stop my-resume || true
            docker rm my-resume || true
