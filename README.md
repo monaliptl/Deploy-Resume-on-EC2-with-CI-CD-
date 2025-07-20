@@ -1,20 +1,21 @@
-# 🚀 Resume Deployment on AWS
+# 🚀 Resume Deployment on AWS (CI/CD with Docker & GitHub Actions)
 
-This project demonstrates automated CI/CD deployment of a resume website to AWS EC2 using GitHub Actions.
+This project demonstrates how to automatically deploy a static resume website to an AWS EC2 instance using Docker and GitHub Actions.
 
 ## 📁 Tech Stack
 - HTML/CSS
-- GitHub Actions (CI/CD)
+- Docker (containerization)
+- GitHub Actions (CI/CD Pipeline)
 - AWS EC2 (Ubuntu)
-- Apache Web Server
+
 
 
 ## ⚙️ How it Works
 
 1. Push code to the `main` branch
 2. GitHub Actions connects to EC2 via SSH
-3. Code is deployed to Apache web server
-4. Resume is instantly live
+3. It clones the repository, builds a Docker image, and runs the container
+4. Resume site is live and running on EC2 (Port 80)
 
 ## 🛠 Setup
 
@@ -30,9 +31,9 @@ This project demonstrates automated CI/CD deployment of a resume website to AWS 
 | Name | Description |
 |------|-------------|
 | `EC2_SSH_KEY` | Your PEM key content |
-| `HOST_DNS`    | EC2 Public DNS |
+| `HOST_DNS`    | EC2 Public DNS or IP |
 | `USERNAME`    | Usually `ubuntu` |
-| `TARGET_DIR`  | e.g. `/home/ubuntu/index` |
+| `TARGET_DIR`  | Deployment target directory (e.g. `/home/ubuntu/my-resume`) |
 
 ### 3. Create `.github/workflows/push-action-ec2.yml`
 See: [push-action-ec2.yml](.github/workflows/push-action-ec2.yml)
